@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "soundFile": "D:\\React\\2025\\3-lipsync-avatar\\public\\audios\\defeated.wav",
+    "duration": 6.53
+  },
+  "mouthCues": [
+    { "start": 0.0, "end": 0.06, "value": "X" },
+    { "start": 0.06, "end": 0.85, "value": "B" },
+    { "start": 0.85, "end": 0.92, "value": "E" },
+    { "start": 0.92, "end": 1.27, "value": "B" },
+    { "start": 1.27, "end": 1.34, "value": "F" },
+    { "start": 1.34, "end": 1.69, "value": "B" },
+    { "start": 1.69, "end": 1.81, "value": "A" },
+    { "start": 1.81, "end": 2.07, "value": "C" },
+    { "start": 2.07, "end": 2.28, "value": "E" },
+    { "start": 2.28, "end": 2.35, "value": "B" },
+    { "start": 2.35, "end": 2.63, "value": "C" },
+    { "start": 2.63, "end": 2.98, "value": "B" },
+    { "start": 2.98, "end": 3.19, "value": "C" },
+    { "start": 3.19, "end": 3.27, "value": "A" },
+    { "start": 3.27, "end": 3.33, "value": "F" },
+    { "start": 3.33, "end": 3.52, "value": "B" },
+    { "start": 3.52, "end": 3.66, "value": "C" },
+    { "start": 3.66, "end": 3.74, "value": "A" },
+    { "start": 3.74, "end": 3.79, "value": "B" },
+    { "start": 3.79, "end": 3.84, "value": "C" },
+    { "start": 3.84, "end": 4.15, "value": "B" },
+    { "start": 4.15, "end": 4.33, "value": "C" },
+    { "start": 4.33, "end": 4.4, "value": "F" },
+    { "start": 4.4, "end": 4.75, "value": "B" },
+    { "start": 4.75, "end": 4.82, "value": "E" },
+    { "start": 4.82, "end": 4.96, "value": "C" },
+    { "start": 4.96, "end": 5.1, "value": "B" },
+    { "start": 5.1, "end": 5.17, "value": "C" },
+    { "start": 5.17, "end": 5.38, "value": "B" },
+    { "start": 5.38, "end": 5.8, "value": "C" },
+    { "start": 5.8, "end": 5.94, "value": "B" },
+    { "start": 5.94, "end": 6.08, "value": "C" },
+    { "start": 6.08, "end": 6.25, "value": "A" },
+    { "start": 6.25, "end": 6.39, "value": "B" },
+    { "start": 6.39, "end": 6.53, "value": "X" }
+  ]
+}
