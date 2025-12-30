@@ -6,8 +6,6 @@ const app = new Elysia().get("/", () => "Hello Elysia").listen(3000);
 const RHUBARB =
   platform() === "win32" ? "./binWindows/rhubarb.exe" : "./binLinux/rhubarb";
 
-console.log(RHUBARB);
-
 app.get("generate", async () => {
   const process = Bun.spawn([
     RHUBARB,
