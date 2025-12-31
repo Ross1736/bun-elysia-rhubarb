@@ -20,8 +20,8 @@ RUN make -j$(nproc) && \
 WORKDIR /app
 
 RUN mkdir -p binWhisper/linux && \
-    cp whisper.cpp/build/bin/whisper-server binWhisper/linux/whisper && \
-    chmod +x binWhisper/linux/whisper
+    cp /app/whisper.cpp/build/bin/whisper-server /app/binWhisper/linux/whisper && \
+    chmod +x /app/binWhisper/linux/whisper
 
 RUN mkdir -p models && \
     wget -O models/ggml-tiny.bin \
