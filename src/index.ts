@@ -1,26 +1,37 @@
 import { Elysia } from "elysia";
 import { platform } from "node:os";
+import { whisperToMouthCues } from "./utils/functions";
 
 const app = new Elysia().get("/", () => "Hello Elysia").listen(3000);
 
-const RHUBARB =
-  platform() === "win32" ? "./binWindows/rhubarb.exe" : "./binLinux/rhubarb";
+const WHISPER =
+  platform() === "win32"
+    ? "binWhisper/whisper-cli.exe"
+    : "binWhisper/whisper-cli";
 
 app.get("generate", async () => {
-  const process = Bun.spawn([
-    RHUBARB,
-    "./uploads/defeated.wav",
+  const proc = Bun.spawn([
+    WHISPER,
+    "-m",
+    "models/ggml-tiny.bin",
     "-f",
-    "json",
-    "-o",
-    "./output/defeated.json",
+    "uploads/defeated.wav",
+    "-oj",
+    "-t",
+    "2",
+    "-of",
+    "output/defeated",
   ]);
 
-  await process.exited;
+  const code = await proc.exited;
 
-  const json = await Bun.file("./output/defeated.json").json();
+  if (code !== 0) {
+    return { error: "Whisper exit code " + code };
+  }
 
-  return json;
+  const whisperJson = await Bun.file("output/defeated.json").json();
+
+  return whisperToMouthCues(whisperJson);
 });
 
 console.log(
