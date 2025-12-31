@@ -6,8 +6,8 @@ const app = new Elysia().get("/", () => "Hello Elysia - Whisper").listen(3000);
 
 const WHISPER =
   platform() === "win32"
-    ? "binWhisper/whisper-cli.exe"
-    : "binWhisper/whisper-cli";
+    ? "binWhisper/whisper.exe"
+    : "binWhisper/linux/whisper";
 
 app.get("generate", async () => {
   const proc = Bun.spawn([
