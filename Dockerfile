@@ -11,14 +11,12 @@ RUN apt-get update && apt-get install -y \
 RUN git clone https://github.com/ggerganov/whisper.cpp.git
 
 WORKDIR /app/whisper.cpp
-
-# 🔥 AQUÍ EL FIX
-RUN make
+RUN make -j$(nproc)
 
 WORKDIR /app
 
 RUN mkdir -p binWhisper/linux && \
-    cp whisper.cpp/whisper-cli binWhisper/linux/whisper && \
+    cp whisper.cpp/bin/whisper-cli binWhisper/linux/whisper && \
     chmod +x binWhisper/linux/whisper
 
 RUN mkdir -p models && \
